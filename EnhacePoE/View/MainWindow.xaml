@@ -13,6 +13,7 @@
         SizeToContent="WidthAndHeight"
         WindowStyle="SingleBorderWindow"
         MouseDown="Window_MouseDown"
+        ResizeMode="NoResize"
         Left="{Binding Source={x:Static properties:Settings.Default}, Path=LeftMain, Mode=TwoWay}"
         Top="{Binding Source={x:Static properties:Settings.Default}, Path=TopMain, Mode=TwoWay}"
         >
