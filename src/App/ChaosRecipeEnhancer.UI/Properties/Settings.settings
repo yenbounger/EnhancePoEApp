@@ -1,11 +1,8 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ChaosRecipeEnhancer.UI.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="PathOfExileAccountName" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="PathOfExileWebsiteSessionId" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="PoEAccountConnectionStatus" Type="System.Int32" Scope="User">
@@ -25,9 +22,6 @@
     </Setting>
     <Setting Name="CustomLeagueEnabled" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="TargetStash" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="StashTabQueryMode" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
@@ -170,5 +164,27 @@
     <Setting Name="UpgradeSettingsAfterUpdate" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="PathOfExileApiAuthTokenExpiration" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PathOfExileApiAuthToken" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="VendorSetsEarly" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SoundEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RefreshFilterSoundPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Assets\Sounds\FilterChanged.mp3</Value>
+    </Setting>
+    <Setting Name="SetCompleteSoundPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Assets\Sounds\ItemPickedUp.mp3</Value>
+    </Setting>
+    <Setting Name="SoundVolume" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
+

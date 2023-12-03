@@ -54,6 +54,8 @@
 		<Resource Include="Assets\Images\Validated.png" />
 		<Resource Include="Assets\Images\Warning.png" />
 		<Resource Include="Assets\Images\Error.png" />
+		<Resource Include="Assets\Images\Loading.png" />
+
 
 		<!-- Sounds -->
 		<Content Update="Assets\Sounds\FilterChanged.mp3">
@@ -70,6 +72,10 @@
 
 		<!-- Documentation -->
 		<Content Include="Extensions\README.md" />
+		<None Remove="Assets\Sounds\FilterChanged.mp3" />
+		<Content Include="Assets\Sounds\FilterChanged.mp3">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -99,8 +105,8 @@
 
 	<!-- Dependencies -->
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
 		<Reference Include="WpfToolkit">
 			<HintPath>Utilities\WpfToolkit\Xceed.Wpf.Toolkit.NET5.dll</HintPath>
 		</Reference>
@@ -111,7 +117,9 @@
 	<ItemGroup>
 		<Compile Remove="UserControls\SetTrackerOverlayDisplays\OnlyMinifiedButtonsDisplay.xaml.cs" />
 		<Compile Remove="UserControls\SetTrackerOverlayDisplays\OnlyButtonsDisplay.xaml.cs" />
+		<None Remove="Assets\Images\Loading.png" />
 		<Page Remove="UserControls\SetTrackerOverlayDisplays\OnlyMinifiedButtonsDisplay.xaml" />
 		<Page Remove="UserControls\SetTrackerOverlayDisplays\OnlyButtonsDisplay.xaml" />
+		<Page Remove="UserControls\SettingsForms\OtherForms\SoundForm.xaml" />
 	</ItemGroup>
 </Project>
