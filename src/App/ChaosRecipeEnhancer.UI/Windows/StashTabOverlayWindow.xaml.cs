@@ -20,6 +20,7 @@ namespace ChaosRecipeEnhancer.UI.Windows;
 public partial class StashTabOverlayWindow
 {
     private readonly IItemSetManagerService _itemSetManagerService = Ioc.Default.GetService<IItemSetManagerService>();
+    private readonly ISoundService _soundService = Ioc.Default.GetService<ISoundService>();
 
     private readonly StashTabOverlayViewModel _model;
     private static List<EnhancedItemSet> SetsToHighlight { get; } = new();
@@ -214,6 +215,7 @@ public partial class StashTabOverlayWindow
                 // Set has been completed
                 if (SetsToHighlight[0].Items.Count == 0)
                 {
+                    _soundService.PlaySound(SoundType.SetComplete);
                     SetsToHighlight.RemoveAt(0);
 
                     // activate next set
