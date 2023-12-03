@@ -1,4 +1,4 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ChaosRecipeEnhancer.UI.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
@@ -173,5 +173,18 @@
     <Setting Name="VendorSetsEarly" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="SoundEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RefreshFilterSoundPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Assets\Sounds\FilterChanged.mp3</Value>
+    </Setting>
+    <Setting Name="SetCompleteSoundPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Assets\Sounds\ItemPickedUp.mp3</Value>
+    </Setting>
+    <Setting Name="SoundVolume" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
+

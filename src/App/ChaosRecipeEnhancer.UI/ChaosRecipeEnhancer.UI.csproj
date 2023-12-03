@@ -72,6 +72,10 @@
 
 		<!-- Documentation -->
 		<Content Include="Extensions\README.md" />
+		<None Remove="Assets\Sounds\FilterChanged.mp3" />
+		<Content Include="Assets\Sounds\FilterChanged.mp3">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -116,5 +120,6 @@
 		<None Remove="Assets\Images\Loading.png" />
 		<Page Remove="UserControls\SetTrackerOverlayDisplays\OnlyMinifiedButtonsDisplay.xaml" />
 		<Page Remove="UserControls\SetTrackerOverlayDisplays\OnlyButtonsDisplay.xaml" />
+		<Page Remove="UserControls\SettingsForms\OtherForms\SoundForm.xaml" />
 	</ItemGroup>
 </Project>

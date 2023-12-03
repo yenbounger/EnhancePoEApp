@@ -53,6 +53,7 @@ internal partial class App
         services.AddSingleton<IReloadFilterService, ReloadFilterService>();
         services.AddSingleton<IItemSetManagerService, ItemSetManagerService>();
         services.AddSingleton<IFilterManipulationService, FilterManipulationService>();
+        services.AddSingleton<ISoundService, SoundService>();
     }
 
     private void OnStartup(object sender, StartupEventArgs e)

@@ -21,6 +21,7 @@ internal sealed class SetTrackerOverlayViewModel : ViewModelBase
     private readonly IItemSetManagerService _itemSetManagerService = Ioc.Default.GetRequiredService<IItemSetManagerService>();
     private readonly IReloadFilterService _reloadFilterService = Ioc.Default.GetRequiredService<IReloadFilterService>();
     private readonly IApiService _apiService = Ioc.Default.GetRequiredService<IApiService>();
+    private readonly ISoundService _soundService = Ioc.Default.GetRequiredService<ISoundService>();
 
     private const string SetsFullText = "Sets full!";
     private const int FetchCooldown = 30;
@@ -31,6 +32,32 @@ internal sealed class SetTrackerOverlayViewModel : ViewModelBase
     private bool _setsTooltipEnabled = false;
     private string _warningMessage;
 
+    public SetTrackerOverlayViewModel()
+    {
+        SubscribeToActiveProperties();
+    }
+    
+    private void SubscribeToActiveProperties()
+    {
+        var activePropertyName = new List<string>
+        {
+            nameof(RingsActive),
+            nameof(AmuletsActive),
+            nameof(BeltsActive),
+            nameof(ChestsActive),
+            nameof(WeaponsActive),
+            nameof(GlovesActive),
+            nameof(HelmetsActive),
+            nameof(BootsActive)
+        };
+        PropertyChanged += (sender, args) =>
+        {
+            if (activePropertyName.Contains(args.PropertyName))
+            {
+                _soundService.PlaySound(SoundType.RefreshFilter);
+            }
+        };
+    }
     public bool FetchButtonEnabled
     {
         get => _fetchButtonEnabled;
@@ -182,7 +209,7 @@ internal sealed class SetTrackerOverlayViewModel : ViewModelBase
                 return false;
             }
         }
-        catch (NullReferenceException)
+        catch (NullReferenceException ex)
         {
             FetchButtonEnabled = true;
             GlobalAuthState.Instance.PurgeLocalAuthToken();
