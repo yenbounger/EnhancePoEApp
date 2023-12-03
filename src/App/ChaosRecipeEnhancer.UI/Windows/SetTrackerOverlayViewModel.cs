@@ -58,6 +58,7 @@ internal sealed class SetTrackerOverlayViewModel : ViewModelBase
             }
         };
     }
+    
     public bool FetchButtonEnabled
     {
         get => _fetchButtonEnabled;
@@ -345,7 +346,7 @@ internal sealed class SetTrackerOverlayViewModel : ViewModelBase
     public bool HelmetsActive => Settings.LootFilterHelmetsAlwaysActive || (NeedsFetching || Properties.Settings.Default.FullSetThreshold - _itemSetManagerService.RetrieveHelmetsAmount() > 0);
 
     public int BootsAmount => ShowAmountNeeded ? Math.Max(Properties.Settings.Default.FullSetThreshold - _itemSetManagerService.RetrieveBootsAmount(), 0) : _itemSetManagerService.RetrieveBootsAmount();
-    public bool BootsActive => Settings.LootFilterBootsAlwaysActive || (NeedsFetching || Properties.Settings.Default.FullSetThreshold - _itemSetManagerService.RetrieveBootsAmount() > 0);
+    public bool BootsActive => Settings.LootFilterBootsAlwaysActive || NeedsFetching || Properties.Settings.Default.FullSetThreshold - _itemSetManagerService.RetrieveBootsAmount() > 0;
 
     #endregion
 

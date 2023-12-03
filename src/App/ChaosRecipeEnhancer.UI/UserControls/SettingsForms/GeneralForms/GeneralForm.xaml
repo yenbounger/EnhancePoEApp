@@ -35,6 +35,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />           
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
@@ -293,5 +294,22 @@
                 </Style>
             </Button.Style>
         </Button>
+        <!-- Enable Sounds Checkbox Start -->
+        <TextBlock
+            Grid.Column="0"
+            Grid.Row="7"
+            Margin="0 0 0 10"
+            VerticalAlignment="Center"
+            Text="Enable Sounds:"
+            ToolTipService.InitialShowDelay="50"
+            ToolTip="Enables sounds when your loot filter needs to refresh, or when you take a full set from your stash tab." />
+
+        <CheckBox
+            Grid.Column="1"
+            Grid.Row="7"
+            Margin="10 0 0 10"
+            VerticalAlignment="Center"
+            IsChecked="{Binding Settings.SoundEnabled, Mode=TwoWay}" />
+        <!-- Enable Sounds Checkbox Start -->
     </Grid>
 </UserControl>
